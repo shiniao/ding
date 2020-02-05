@@ -31,11 +31,11 @@ class RequestContext(object):
 class Ding(object):
 
     def __init__(self):
-        self.url_map = Map()
-        self.view_func = {}
-        self.error_handler = {}
-        self.config = Config
-        self.response = Response
+        self.url_map = Map() # 路由map
+        self.view_func = {} # 视图函数
+        self.error_handler = {} # 错误handler
+        self.config = Config # 配置
+        self.response = Response # 响应
 
     def __call__(self):
         self.wsgi_app()

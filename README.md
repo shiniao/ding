@@ -11,15 +11,27 @@ from ding import Ding
 
 app = Ding()
 
-@app.get('/hello/:name')
-def hello(name):
-    return 'hello, {}'.format(name)
+app.config["DEBUG"] = True
 
-@app.post('/login')
-def login(name):
-    return 
 
-app.run()
+@app.get("/")
+def hello():
+    return app.data("hello, ding. :)")
+
+
+@app.get("/movies")
+def movies(name):
+    return app.json({
+        'movies': [
+            'name': '天注定',
+            'director': '贾樟柯',
+        ]
+    })
+
+
+if __name__ == "__main__":
+    app.run()
+
 ```
 
 ## TODO
