@@ -22,6 +22,12 @@ def login(name):
 app.run()
 ```
 
+## TODO
+- [] 配置管理
+- [] jwt默认支持
+- [] 错误处理
+- [] 
+
 ## License
 
 [木兰宽松许可证](https://license.coscl.org.cn/MulanPSL/)

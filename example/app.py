@@ -6,12 +6,18 @@ app.config["DEBUG"] = True
 
 
 @app.get("/")
-def home():
-    return "hello, ding."
-    
-@app.get("/movies/<name>")
-def movie(name):
-	return jsonify()
+def hello():
+    return app.data("hello, ding. :)")
+
+
+@app.get("/movies")
+def movies(name):
+    return app.json({
+        'movies': [
+            'name': '天注定',
+            'director': '贾樟柯',
+        ]
+    })
 
 
 if __name__ == "__main__":
